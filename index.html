@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name = "view">
+    <title >Add User</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style></style>
+</head>
+<body>
+<pre>
+    <label for = "tags">User</label>
+    <input id = "lan">
+    User id
+    <input id = "lan_id">
+    <button type="button" onclick="https://www.google.com"="https://www.google.com/" name="Submite" id="submite" title="het">Submite</button>
+</pre>
+    <script>
+        var local_source = [
+            {id: 1, value: "java"},
+            {id: 2, value: "C++"},
+            {id: 3, value: "Python"},
+            {id: 4, value: "Rubi"},
+            {id: 5, value: "Javascript"},
+            {id: 6, value: "PHP"}
+        ];
+
+    $("#lan").autocomplete({
+        source: function(request, response){
+            // $.ajax({
+            //         url:"",
+            //         dataType: "json",
+            //         data:{name: $(this).val()},
+                    // success: function(data){
+                        response($.map(local_source,function(item){
+                        return{
+                            id: item.id,
+                            value: item.value
+                        }
+                    }))
+                // }
+
+            // });
+        },
+
+        select: function( event, ui){
+            $(this).val(ui.item.value)
+            $("#lan_id").val(ui.item.id);
+        },
+        minLenth : 3,
+        autoFocus: true,
+    });
+
+
+
+    </script>
+</body>
+
+
+</html>
