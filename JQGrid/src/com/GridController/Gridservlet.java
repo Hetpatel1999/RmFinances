@@ -179,9 +179,11 @@ public class Gridservlet extends HttpServlet {
 		
 		else {
 		//deafalut data
+			int rows = Integer.parseInt(request.getParameter("rows"));
+			int page = Integer.parseInt(request.getParameter("page"));
 			List<GridModel>list = new ArrayList<>();
 			
-			list = service.getdata();
+			list = service.getdata(rows,page);
 			JSONObject jsonobj = new JSONObject();
 		    jsonobj.put("page", 1);
 		    jsonobj.put("total", 2);

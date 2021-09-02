@@ -8,9 +8,9 @@ import com.been.GridModel;
 public class GridService {
 
 	private GridDao dao= new GridDao();
-	public List<GridModel> getdata() {
+	public List<GridModel> getdata(int rows, int page) {
 		
-		return dao.getdata();
+		return dao.getdata(rows,page);
 	}
 
 }

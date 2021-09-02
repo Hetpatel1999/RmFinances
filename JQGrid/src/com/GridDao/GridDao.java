@@ -11,7 +11,7 @@ import com.been.GridModel;
 
 public class GridDao {
 
-	public List<GridModel> getdata() {
+	public List<GridModel> getdata(int rows, int page) {
 		try
 		{
 			 Class.forName("com.mysql.jdbc.Driver");
