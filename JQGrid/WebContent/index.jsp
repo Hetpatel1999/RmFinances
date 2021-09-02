@@ -81,8 +81,8 @@
 			],
 
 			pager : '#page',
-			rowNum : 10,
-			rowList : [ 10, 40, 60 ],
+			rowNum : 5,
+			rowList : [ 5, 10, 15 ],
 			sortname : 'id',
 			sortorder : 'desc',
 			//cmTemplate : { firstsortorder : "desc" },
